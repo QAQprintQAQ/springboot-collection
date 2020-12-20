@@ -1,0 +1,23 @@
+
+server:
+  port: 8082
+
+spring:
+  application:
+    name: sportplay
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sportplay?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: liwenli
+    password: liwenli
+
+mybatis:
+  type-aliases-package: com.liwenli.sportplay.entity
+#  type-aliases-package: com.liwenli.helloworld.entity 因为这个别名包没有改而发生了错误！！Field userMapper in xxx required a bean of type xx that could not be found
+  mapper-locations: classpath:/com/liwenli/sportplay/mapper/*.xml
+
+#
+#logging:
+#  level: debug
+

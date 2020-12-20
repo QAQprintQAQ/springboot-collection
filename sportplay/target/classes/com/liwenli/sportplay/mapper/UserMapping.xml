@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liwenli.sportplay.mapper.UserMapper">
+<!--    已经定义了别名了，所以可以写resultType="user"-->
+<!--    sportplay是数据库，user是数据库下面对应的表-->
+    <select id="getUserByMessage" resultType="user">
+    select * from sportplay.user where username=#{username} and password=#{password} and state=1;
+
+  </select>
+</mapper>
